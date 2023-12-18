@@ -11,12 +11,21 @@
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-
-	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
 	<script src="js/jquery.mobilemenu.js"></script>
+	
+	<script src="js/tooltip.js"></script>
+	
 	<script>
 		$(document).ready(function(){
 			$('#responsive-menu').mobileMenu();
+
+			$("input[type=radio]").checkboxradio();
+			$("input[type=checkbox]").checkboxradio();
+			$("select").selectmenu();
+			$("input[type=submit]").button();
 		});
 	</script>
 </head>
@@ -75,6 +84,7 @@
                     <option value="101-1000">101-1000</option>
                     <option value="More than 1000">More than 1000</option>
 		        </select>
+			    <br>
                 
 			    How did you hear about us?
 			    <select name="hearaboutus" multiple="" size="5">
@@ -84,6 +94,7 @@
                     <option value="Word of Mouth">Word of Mouth</option>
                     <option value="Other">Other</option>
 		        </select>
+			    <br>
                 
 			    Questions or comments for our sales representatives?
 			    <textarea name="questions" size="30" rows="5"></textarea>
